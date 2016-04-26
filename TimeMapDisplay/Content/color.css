@@ -1,0 +1,260 @@
+.swatch {
+    right: 0px;
+    border: 0;
+    z-index: 1000001;
+    position: absolute;
+    overflow: hidden;
+    margin: 80px 10px 0 0;
+    padding-left:100px;
+}
+
+.swatch .button { padding:0px; width:28px; height:27px; vertical-align:middle;float:left;border-radius: 1px;margin-top:2px;}
+.swatch Span{display:block; margin:2px; padding: 3px; text-align:center; width: auto;vertical-align:middle;}
+.text{
+	visibility:hidden;
+	font-size:small;	
+	vertical-align:middle;
+}
+
+/*mini part*/
+.mini{
+	width:30px;
+	height:58px;	
+	position:relative;
+}
+.mini:hover .button{
+	border-left:2px solid #FFBB33;	
+	
+}
+/*.mini:hover  .des{	
+	visibility:visible;
+}*/
+.mini_1 {
+	width:28px;
+	height:27px;
+	color:green;	
+}
+.mini_1 .button{
+	background:#FFEECC;
+}
+.mini_2 .button{
+	background:#FFDD99;
+}
+
+.mini_2 {
+	width:28px;
+	height:27px;
+	color:green;	
+}
+
+/*low part*/
+.low{
+	width:30px;
+	height:58px;	
+	position:relative;	
+}
+
+.low:hover .button{
+	border-left:2px solid #F90;
+}
+/*.low:hover  .des{	
+	visibility:visible;
+}*/
+.low:hover .text{
+	font-size:15px;
+}
+.low_1 .button{
+	background:#FFCC66;
+}
+.low_2 .button{
+	background:#FFBB33;
+}
+
+/*moderate part*/
+.moderate{
+	width:30px;
+	height:58px;	
+	position:relative;	
+}
+.moderate .text{
+	color: green;
+	visibility:hidden;	
+}
+.mod_1 .button{
+	background:#FFAA00;
+}
+.mod_2 .button{
+	background:#CC8800;
+}
+
+.moderate:hover .button{
+	border-left:2px solid #F90;
+}
+/*.moderate:hover .des{
+	visibility:visible;
+}*/
+.moderate:hover .text{
+	font-size:15px;
+}
+/*high part*/
+.high{
+	width:30px;
+	height:58px;	
+	position:relative;
+}
+.high .text{
+	color: green;
+	visibility:hidden;	
+}
+.high_1 .button{
+	background:#996600;
+}
+.high_2 .button{
+	background:#664400;
+}
+
+.high:hover .button{
+	border-left:2px solid #F90;
+}
+/*.high:hover .des{
+	visibility:visible;
+}*/
+.high:hover .text{
+	font-size:15px;
+}
+/* Activity level, appear on the right*/
+.des{	
+    position: absolute;
+    margin: 21px 0px 21px 33px;
+    font-family: open_sansregular, sans-serif, Arial, Helvetica;
+    font-size: small;
+	top:0px;
+	visibility:hidden;
+	right:32px;
+	z-index:1000001;
+    border-radius:2px;
+    
+}
+.des p{	
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 16px;
+	
+}
+
+
+
+
+
+
+/*
+#timelinecontainer:hover {
+    border:2px solid #ff0000;
+*/
+
+/* Time Map CSS*/
+p.content {
+font-size: 12px;
+width: 30em;
+}
+
+div#help {
+font-size: 12px;
+width: 45em;
+padding: 1em;
+}
+
+div#timemap {
+width:79%;
+float:left;
+position:relative;
+}
+
+div#timelinecontainer{
+width: 100%;
+height: 100px;
+}
+
+div#timeline{
+ width: 100%;
+ height: 100%;
+ font-size: 12px;
+ background: #CCCCCC;
+}
+
+div#mapcontainer {
+ width: 100%;
+ height: 500px;
+}
+
+div#map {
+ width: 100%;
+ height: 100%;
+ background: #EEEEEE;
+}
+
+div.infotitle {
+    font-size: 14px;
+    font-weight: bold;
+}
+div.infodescription {
+    font-size: 14px;
+    font-style: italic;
+}
+
+div.custominfostyle {
+    font-family: Georgia, Garamond, serif;
+    font-size: 1.5em;
+    font-style: italic;
+    width: 20em;
+}
+.timeline-Footer{
+    display:none;
+}
+/* Button stple*/
+#dragtarget{
+  padding: 15px 40px;  
+  background: #0099CC;
+  border: none;
+  border-radius: 4px;
+  color: white;  
+  animation: attention 8s ease infinite;
+  position:absolute;
+  z-index:1000001;
+  right:300px;
+  bottom:20px;
+  opacity:0.5;
+}
+
+@keyframes attention {
+  0% {
+    transform: none;
+  }
+  3% {
+    transform: scale(1.05);
+  }
+  7% {
+    transform: scale(0.95);
+  }
+  11% {
+    transform: scale(1.03);
+  }
+  15% {
+    transform: scale(1);
+  }
+  19% {
+    transform: none;
+  }
+  52% {
+    transform: scale(1.05);
+  }
+  56% {
+    transform: scale(0.95);
+  }
+  60% {
+    transform: scale(1.03);
+  }
+  64% {
+    transform: scale(1);
+  }
+}

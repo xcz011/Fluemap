@@ -1,0 +1,101 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TimeMapDisplay.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <script type="text/javascript" src="Scripts/TimeMapLibrary/lib/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="Scripts/TimeMapLibrary/lib/mxn/mxn.js"></script>
+    <script type="text/javascript" src="Scripts/TimeMapLibrary/lib/mxn/mxn.core.js"></script>
+    <script type="text/javascript" src="Scripts/TimeMapLibrary/lib/mxn/mxn.google.core.js"></script>    
+    <script type="text/javascript" src="Scripts/TimeMapLibrary/lib/timeline-2.3.0.js"></script>
+    <script type="text/javascript" src="Scripts/TimeMapLibrary/src/timemap.js" ></script>
+    <script type="text/javascript" src="Scripts/TimeMapLibrary/src/loaders/json.js"></script>
+    <script type="text/javascript" src="Scripts/TimeMapLibrary/src/loaders/progressive.js"></script>
+    <script type="text/html" src="App_Data/states.json"></script>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />    
+    <link href="Content/color.css" rel="stylesheet" type="text/css">
+    <link href="Content/hint.css" rel="stylesheet"  type="text/css">
+
+</head>
+<body>
+    <form runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                 <%--<asp:ScriptReference Name="bootstrap" />--%>
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="header_bk">
+            
+                <div class="header cf">
+        	    <a class="brand" id="lnkHomeImage" onclick="hideUrlReference('Default.aspx');"><img id="imgLogo" alt="Health &amp; Technology Innovation Center Logo" src="assets/cchs_logo_htic.png"></a>
+                <div class="extra">
+            	    <!--<div class="search">
+                	    <input name="search" type="search" id="search" placeholder="SEARCH">
+                    </div>-->
+                    <div class="nav">
+                	    <div class="menu-btn"><img width="30" height="30" alt="MENU" src="assets/menu_icon.png"><!--<span>MENU</span>--></div>
+                	    <ul class="closed">
+                    	    <li class="nav_home"><a id="lnkHome" href="Default.aspx">Home</a></li>
+                            <li class="nav_submit_idea"><a id="lnkSubmitIdea" href="About.aspx">Flu Heat Map</a></li>
+                            <%--<li class="nav_browse_ideas"><a id="lnkBrowseIdeas" href="Contack.aspx">Contact</a></li> --%>
+                            
+                        </ul>
+                    </div>
+              </div>
+            </div>
+                            
+            
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />            
+            <div class="footer_bk">
+    	    <div class="footer cf">
+        	    <div class="nav_footer">
+            	    <ul>
+                	    <li><a id="lnkWhatWeDo" onclick="hideUrlReference('WhatWeDo.aspx');">What We Do</a></li>
+                        <li><a id="lnkOurTeam" onclick="hideUrlReference('OurTeam.aspx');">Our Team</a></li>
+                        <li><a id="lnkOutProcess" onclick="hideUrlReference('OurProcess.aspx');">Our Process</a></li>
+                        <li><a id="lnkOurProjects" onclick="hideUrlReference('OurProjects.aspx');">Our Projects</a></li>
+                        <li><a id="lnkFocusAreas" onclick="hideUrlReference('FocusAreas.aspx');">Focus Areas</a></li>
+                        <li></li>
+                        <!--
+                        <li><a class="support" href="Support.aspx">Support</a></li>
+                        -->
+                    </ul>
+                </div>
+                <div class="support_footer">If you have any support questions, please <a id="lnkContactUsFooter" onclick="hideUrlReference('ContactUs.aspx');">contact us</a>.</div>
+                <div class="copyr">© Copyright 2016 Christiana Care Health Services, Inc.<br>All Rights Reserved | <a id="lnkTermsAndConditions" onclick="hideUrlReference('TermsAndConditions.aspx');">Terms and Conditions</a></div>
+                <div class="brand_footer"><img alt="Christiana Care Health System Logo" src="assets/images/cchs_logo.png"></div>
+            </div>
+        </div>         
+        </div>
+    </form>
+</body>
+</html>
