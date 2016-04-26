@@ -115,7 +115,7 @@ $(function() {
                     <div id="map"></div>
                 </div>
                 <!-- mouse down to display the button and make dispare in 10s  there is nothing wrong need to be fixed-->
-                <div id="timelinecontainer" onmousedown="mouseDown()" onmouseup="myVar=setTimeout(mouseUp, 10000);" >
+                <div id="timelinecontainer" onmousedown="mouseDown()" onmouseup="myVar=setTimeout(mouseUp, 100000);" >
                     <div id="timeline" ></div>
                     <button id="dragtarget">Drag Here </button>
                 </div>
