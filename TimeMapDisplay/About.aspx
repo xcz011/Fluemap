@@ -26,7 +26,7 @@ $(function() {
                     // url with start/end placeholders
                     //url: "http://cis-linux2.temple.edu/~tuf69946/js_test/timemap.2.0.1/api/fake_api_all_states.php?callback=?",
                     //url: "http://localhost:59885/api/Timemap?callback=?"
-                    url: "http://localhost:62988/App_Data/state1.json"                    
+                    url: "/App_Data/state1.json"                    
 					
                     //start: "2014-10-15",
 					
@@ -123,9 +123,7 @@ $(function() {
             <div class="twitterborder" style="width:20%;float:left;">
                 <a class="twitter-timeline" href="https://twitter.com/xcz011/lists/health" data-widget-id="718459861206478848"  data-chrome="noheader nofooter">Tweets from https://twitter.com/xcz011/lists/health</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </div>
-        
-        
+            </div>       
        </div>
     </div>
     
